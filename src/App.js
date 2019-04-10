@@ -1,28 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import {Route , Switch, Redirect, withRouter} from 'react-router-dom'
+import Settings from './containers/Settings/Settings'
+import Weather from './containers/Weather/Weather'
+import Navigation from './components/Navigation/Navigation'
+import {getWeather} from './store/actions/weather'
+
+
 
 class App extends Component {
+
+
   render() {
+
+    let routes = (
+      <Switch>
+        <Route path = '/' exact component = {Weather}/>
+        <Route path = '/settings' component = {Settings}/>
+        <Redirect to = '/' />
+      </Switch>
+    )
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div >
+        <Navigation getWeather = {this.props.getWeather}/>
+        {routes}
       </div>
     );
   }
 }
 
-export default App;
+function mapDispatchToProps(dispatch) {
+  return {
+    getWeather : () => dispatch(getWeather())
+  }
+}
+
+
+export default withRouter(connect( null , mapDispatchToProps)(App))

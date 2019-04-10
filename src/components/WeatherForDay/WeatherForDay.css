@@ -1,0 +1,62 @@
+.CityName{
+  text-align: center;
+  color: #888;
+}
+
+.CityName span {
+  color: #444;
+}
+
+.WeatherItems{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.WeatherForDay{
+  margin: 3%;
+}
+
+.WeatherForDay header {
+  padding: 5px;
+  height: 120px;
+  width: 130px;
+  background: linear-gradient(to bottom right , #2E9AFE , #CEE3F6);
+  border-radius: 10px 10px 0 0 ;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+
+}
+.WeatherForDay footer {
+  box-shadow: 0px 0px 2px 0px #ccc;
+  border-radius:  0 0 10px 10px;
+  background: #FFFAFA;
+  height: 40px;
+  word-wrap: break-word;
+  width: 130px;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.WeatherForDay .Degree{
+  display: inline-block;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 25px;
+
+}
+.WeatherForDay span{
+  padding: 5px;
+
+  font-size: 16px;
+}
+
+.Degree{
+  font-size: 20px;
+}
+
+.CurrentWeather header{
+  background: linear-gradient(to bottom right , #ff5345 , #ffb55a);
+}

@@ -1,0 +1,38 @@
+.Navigation{
+  display: flex;
+  justify-content: space-around;
+  background: #424242;
+  color: #fff;
+  text-decoration: none;
+  height: 30px;
+  max-width: 100vw;
+
+
+}
+
+.Link   {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px;
+  cursor: pointer;
+    width: 100px;
+}
+
+.reload{
+  padding: 7px;
+  cursor: pointer;
+}
+
+.settings {
+  animation: 8s linear 0s normal none infinite running settings;
+
+
+}
+@keyframes settings {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
